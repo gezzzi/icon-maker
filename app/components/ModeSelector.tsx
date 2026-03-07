@@ -8,6 +8,7 @@ interface ModeSelectorProps {
 }
 
 const modes: { value: IconMode; label: string }[] = [
+  { value: "ai-prompt", label: "AI プロンプト" },
   { value: "text", label: "テキスト" },
   { value: "emoji", label: "絵文字" },
   { value: "shape", label: "図形" },
@@ -15,7 +16,6 @@ const modes: { value: IconMode; label: string }[] = [
   { value: "gradient", label: "グラデーション" },
   { value: "pattern", label: "パターン" },
   { value: "identicon", label: "アイデンティコン" },
-  { value: "ai-prompt", label: "AI プロンプト" },
 ];
 
 export function ModeSelector({ value, onChange }: ModeSelectorProps) {

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated SVG files (AI prompt output)
+/public/generated/
+
+# local desktop app files
+app-icon.ico
+start-icon-maker.bat
+create-shortcut.ps1

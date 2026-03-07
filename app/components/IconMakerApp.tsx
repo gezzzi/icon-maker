@@ -105,7 +105,7 @@ const defaultConfigs: Record<IconMode, IconConfig> = {
 };
 
 export function IconMakerApp() {
-  const [config, setConfig] = useState<IconConfig>(DEFAULT_CONFIG);
+  const [config, setConfig] = useState<IconConfig>(defaultConfigs["ai-prompt"]);
   const [svgString, setSvgString] = useState<string | undefined>();
 
   // Get SVG string for Lucide icons
