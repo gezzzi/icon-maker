@@ -101,6 +101,7 @@ export interface PromptConfig {
   bgType: "transparent" | "color" | "auto";
   bgColor: string;
   purpose: "favicon" | "windows" | "sns" | "general";
+  characterFace: boolean;
 }
 
 export type IconConfig =

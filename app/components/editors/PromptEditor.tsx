@@ -16,12 +16,6 @@ const styles: { value: PromptConfig["style"]; label: string }[] = [
   { value: "auto", label: "AI にお任せ" },
 ];
 
-const purposes: { value: PromptConfig["purpose"]; label: string }[] = [
-  { value: "favicon", label: "Favicon" },
-  { value: "windows", label: "Windows" },
-  { value: "sns", label: "SNS" },
-  { value: "general", label: "汎用" },
-];
 
 export function PromptEditor({ config, onChange }: PromptEditorProps) {
   const update = (partial: Partial<PromptConfig>) =>
@@ -119,23 +113,31 @@ export function PromptEditor({ config, onChange }: PromptEditorProps) {
       </div>
 
       <div>
-        <span className="text-sm text-muted block mb-1">用途</span>
-        <div className="flex flex-wrap gap-1">
-          {purposes.map((p) => (
-            <button
-              key={p.value}
-              onClick={() => update({ purpose: p.value })}
-              className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
-                config.purpose === p.value
-                  ? "bg-primary text-white border-primary"
-                  : "bg-surface border-border hover:bg-surface-hover"
-              }`}
-            >
-              {p.label}
-            </button>
-          ))}
+        <span className="text-sm text-muted block mb-1">キャラクターデザイン</span>
+        <div className="flex gap-1">
+          <button
+            onClick={() => update({ characterFace: true })}
+            className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
+              config.characterFace
+                ? "bg-primary text-white border-primary"
+                : "bg-surface border-border hover:bg-surface-hover"
+            }`}
+          >
+            あり
+          </button>
+          <button
+            onClick={() => update({ characterFace: false })}
+            className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
+              !config.characterFace
+                ? "bg-primary text-white border-primary"
+                : "bg-surface border-border hover:bg-surface-hover"
+            }`}
+          >
+            なし
+          </button>
         </div>
       </div>
+
     </div>
   );
 }

@@ -95,12 +95,13 @@ const defaultConfigs: Record<IconMode, IconConfig> = {
   "ai-prompt": {
     mode: "ai-prompt",
     description: "",
-    style: "outline",
-    autoColor: false,
+    style: "auto",
+    autoColor: true,
     color: "#4F46E5",
-    bgType: "transparent",
+    bgType: "auto",
     bgColor: "#FFFFFF",
-    purpose: "favicon",
+    purpose: "windows",
+    characterFace: false,
   },
 };
 
